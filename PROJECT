@@ -1,0 +1,16 @@
+domain: origoss.com
+layout:
+- go.kubebuilder.io/v3
+projectName: sensitive
+repo: github.com/tkircsi/sensitive
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: origoss.com
+  group: test
+  kind: Sensitive
+  path: github.com/tkircsi/sensitive/api/v1alpha1
+  version: v1alpha1
+version: "3"

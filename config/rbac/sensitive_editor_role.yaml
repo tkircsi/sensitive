@@ -1,0 +1,24 @@
+# permissions for end users to edit sensitives.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sensitive-editor-role
+rules:
+- apiGroups:
+  - test.origoss.com
+  resources:
+  - sensitives
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - test.origoss.com
+  resources:
+  - sensitives/status
+  verbs:
+  - get

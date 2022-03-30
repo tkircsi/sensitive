@@ -1,0 +1,6 @@
+apiVersion: test.origoss.com/v1alpha1
+kind: Sensitive
+metadata:
+  name: sensitive-sample
+spec:
+  # TODO(user): Add fields here

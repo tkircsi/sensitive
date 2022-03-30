@@ -1,0 +1,20 @@
+# permissions for end users to view sensitives.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sensitive-viewer-role
+rules:
+- apiGroups:
+  - test.origoss.com
+  resources:
+  - sensitives
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - test.origoss.com
+  resources:
+  - sensitives/status
+  verbs:
+  - get
